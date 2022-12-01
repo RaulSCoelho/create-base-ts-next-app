@@ -2,7 +2,6 @@
   "name": "create-base-ts-next-app",
   "version": "1.0.0",
   "bin": "./bin/cli.js",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
