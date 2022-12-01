@@ -1,13 +1,15 @@
 import React, { memo } from 'react'
 
+import { Property } from 'csstype'
+
 import { SwitchStyle } from './styles'
 
 interface Props {
   width: number
   height: number
   handleDiameter: number
-  onColor?: string
-  offColor?: string
+  onColor?: Property.BackgroundColor
+  offColor?: Property.BackgroundColor
   switchWhen: boolean
   onClick: () => void
 }
