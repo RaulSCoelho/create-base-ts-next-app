@@ -25,6 +25,7 @@ export default createGlobalStyle`
 
   #__next {
     background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
     width: 100vw;
     height: 100vh;
     display: flex;

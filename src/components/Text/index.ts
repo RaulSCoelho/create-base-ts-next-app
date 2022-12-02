@@ -1,12 +1,13 @@
+import { Property } from 'csstype'
 import styled from 'styled-components'
 
 export interface StyleProps {
-  width?: string
-  height?: string
-  fontSize?: string
-  padding?: string
+  width?: Property.Width
+  height?: Property.Height
+  fontSize?: Property.FontSize
+  padding?: Property.Padding
   bold?: boolean
-  textAlign?: 'start' | 'center' | 'end'
+  textAlign?: Property.TextAlign
 }
 
 export const Text = styled.p<StyleProps>`

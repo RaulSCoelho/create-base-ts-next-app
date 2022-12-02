@@ -9,16 +9,14 @@ const Home: React.FC = () => {
   const { user } = useContext(UserContext)
 
   return (
-    <div>
+    <Flex>
       <Head>
         <title>Homepage</title>
       </Head>
 
-      <Flex>
-        <h1>{`Hello, ${user?.name}!`}</h1>
-        <img src={user?.avatar_url} alt="" />
-      </Flex>
-    </div>
+      <h1>{`Hello, ${user?.name}!`}</h1>
+      <img src={user?.avatar_url} alt="" />
+    </Flex>
   )
 }
 

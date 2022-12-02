@@ -40,6 +40,7 @@ module.exports = {
     'prefer-const': 'warn',
     'no-restricted-syntax': 'warn',
     'object-shorthand': 'warn',
+    camelcase: 'off',
     'react/jsx-props-no-spreading': 'off',
     'implicit-arrow-linebreak': 'off',
     'react/jsx-curly-newline': 'off',
