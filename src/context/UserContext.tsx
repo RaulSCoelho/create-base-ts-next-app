@@ -14,7 +14,6 @@ type User = {
 type UserContextType = {
   isAuthenticated: boolean
   user: User
-  randomUser: User
 }
 
 export const UserContext = createContext({} as UserContextType)
@@ -34,26 +33,11 @@ export const UserProvider = ({ children }) => {
     return user
   }, [])
 
-  const getRandomFakeUser = useCallback((): User => {
-    faker.seed(Math.random() * 10000)
-    const user: User = {
-      id: faker.datatype.uuid(),
-      name: faker.name.fullName(),
-      username: faker.internet.userName(),
-      email: faker.internet.email(),
-      birthday: faker.date.birthdate(),
-      avatar_url: faker.image.avatar()
-    }
-
-    return user
-  }, [])
-
   const user = getFakeUser()
-  const randomUser = getRandomFakeUser()
   const isAuthenticated = !!user
 
   return (
-    <UserContext.Provider value={{ isAuthenticated, user, randomUser }}>
+    <UserContext.Provider value={{ isAuthenticated, user }}>
       {children}
     </UserContext.Provider>
   )
