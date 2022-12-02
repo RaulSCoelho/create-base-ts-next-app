@@ -1,4 +1,4 @@
-import { createContext, useCallback, useEffect, useState } from 'react'
+import { createContext, useCallback } from 'react'
 
 import { faker } from '@faker-js/faker'
 
@@ -20,10 +20,6 @@ type UserContextType = {
 export const UserContext = createContext({} as UserContextType)
 
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState<User>(null)
-  const [randomUser, setRandomUser] = useState<User>(null)
-  const isAuthenticated = !!user
-
   const getFakeUser = useCallback((): User => {
     faker.seed(12895671)
     const user: User = {
@@ -52,10 +48,9 @@ export const UserProvider = ({ children }) => {
     return user
   }, [])
 
-  useEffect(() => {
-    setUser(getFakeUser())
-    setRandomUser(getRandomFakeUser())
-  }, [getFakeUser, getRandomFakeUser])
+  const user = getFakeUser()
+  const randomUser = getRandomFakeUser()
+  const isAuthenticated = !!user
 
   return (
     <UserContext.Provider value={{ isAuthenticated, user, randomUser }}>
