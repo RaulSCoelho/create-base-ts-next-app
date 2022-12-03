@@ -5,6 +5,7 @@ export default createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    background: ${props => props.theme.colors.background};
     font: 400 16px Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -26,11 +27,6 @@ export default createGlobalStyle`
   #__next {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 60px;
   }
 `
