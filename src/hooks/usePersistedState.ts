@@ -6,7 +6,7 @@ type Response<T> = [T, Dispatch<SetStateAction<T>>]
 
 function usePersistedState<T>(key: string, initialState: T): Response<T> {
   const [state, setState] = useState(() => {
-    const { key: storageValue } = parseCookies()
+    const { [key]: storageValue } = parseCookies()
 
     if (storageValue) {
       if (typeof initialState === 'string') {

@@ -1,7 +1,5 @@
 import { DefaultTheme } from 'styled-components'
 
-import { pallete } from '../pallete'
-
 const light: DefaultTheme = {
   title: 'Light Mode',
 
@@ -9,9 +7,7 @@ const light: DefaultTheme = {
     primary: '#231F20',
     secundary: '#4281A4',
     background: '#EEEEEE',
-    text: '#2d2d2d',
-
-    palette: pallete
+    text: '#2d2d2d'
   }
 }
 

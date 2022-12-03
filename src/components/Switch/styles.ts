@@ -27,7 +27,7 @@ export const SwitchStyle = styled.div<StyleProps>`
   }
 
   #switchCircle {
-    background-color: ${props => props.theme.colors.palette.white};
+    background-color: #ffffff;
     width: ${props => `${props.handleDiameter}px`};
     height: ${props => `${props.handleDiameter}px`};
     border-radius: 50%;

@@ -9,25 +9,6 @@ declare module 'styled-components' {
       secundary: string
       background: string
       text: string
-
-      palette: {
-        black: string
-        white: string
-        red: string
-        green: string
-        blue: string
-        pastel: {
-          black: string
-          white: string
-          red: string
-          green: string
-          blue: string
-          pink: string
-          orange: string
-          lightBlue: string
-          purple: string
-        }
-      }
     }
   }
 }
