@@ -1,17 +1,21 @@
 import React from 'react'
 
-import type { AppProps } from 'next/app'
+import { parseCookies } from 'nookies'
 
 import AppContext from '../context'
 import GlobalStyle from '../styles'
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps, cookies }) {
   return (
-    <AppContext>
+    <AppContext cookies={cookies}>
       <Component {...pageProps} />
       <GlobalStyle />
     </AppContext>
   )
 }
 
-export default App
+App.getInitialProps = ({ ctx }) => {
+  const cookies = parseCookies(ctx)
+
+  return { cookies }
+}

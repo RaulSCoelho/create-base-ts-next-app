@@ -1,13 +1,16 @@
 import React from 'react'
 
-import { ThemesProvider } from './ThemeContext'
+import SettingsProvider from './SettingsContext'
+import ThemesProvider from './ThemeContext'
 import { UserProvider } from './UserContext'
 
-const AppContext = ({ children }) => {
+const AppContext = ({ children, cookies }) => {
   return (
-    <ThemesProvider>
-      <UserProvider>{children}</UserProvider>
-    </ThemesProvider>
+    <SettingsProvider cookies={cookies}>
+      <ThemesProvider>
+        <UserProvider>{children}</UserProvider>
+      </ThemesProvider>
+    </SettingsProvider>
   )
 }
 
