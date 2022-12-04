@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 
+import { Flex, Switch } from 'components'
+import { UserContext } from 'context'
+import { useSettings } from 'hooks'
+import { NextPage } from 'next'
 import Head from 'next/head'
 import { useTheme } from 'styled-components'
 
-import { Flex, Switch } from '../components'
-import { UserContext } from '../context'
-import { useSettings } from '../hooks'
-
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   const { title } = useTheme()
   const { onToggleTheme } = useSettings()
   const { user } = useContext(UserContext)
