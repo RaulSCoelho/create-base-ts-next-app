@@ -58,8 +58,6 @@ export default function SettingsProvider({ children, cookies }) {
   }
 
   return (
-    <SettingsContext.Provider value={{ settings, setSettings, onToggleTheme }}>
-      {children}
-    </SettingsContext.Provider>
+    <SettingsContext.Provider value={{ settings, setSettings, onToggleTheme }}>{children}</SettingsContext.Provider>
   )
 }

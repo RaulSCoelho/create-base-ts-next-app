@@ -14,10 +14,7 @@ export const SwitchStyle = styled.div<StyleProps>`
   padding: 5px;
 
   #switch {
-    background-color: ${props =>
-      props.backgroundColor
-        ? props.backgroundColor
-        : props.theme.colors.secundary};
+    background-color: ${props => (props.backgroundColor ? props.backgroundColor : props.theme.colors.secundary)};
     width: ${props => `${props.width}px`};
     height: ${props => `${props.height}px`};
     padding: ${props => (props.height > props.handleDiameter ? '2px' : '0px')};

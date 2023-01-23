@@ -11,14 +11,16 @@ export interface StyleProps {
   justifyContent?: Property.JustifyContent
 }
 
-export const Flex = styled.div<StyleProps>`
+const Flex = styled.div<StyleProps>`
   display: flex;
   overflow: auto;
   gap: ${props => props.gap};
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
   flex-direction: ${props => props.direction || 'column'};
-  justify-content: ${props => props.justifyContent};
+  justify-content: ${props => props.justifyContent || 'center'};
   align-items: ${props => props.alignItems || 'center'};
   flex-flow: ${props => props.flexFlow};
 `
+
+export default Flex

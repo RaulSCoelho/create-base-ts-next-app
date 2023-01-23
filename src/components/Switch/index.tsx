@@ -14,10 +14,9 @@ interface Props {
   onClick: () => void
 }
 
-export const Switch: React.FC<Props> = memo(props => {
+const Switch: React.FC<Props> = memo(props => {
   let backgroundColor = null
-  if (props.onColor || props.offColor)
-    backgroundColor = props.switchWhen ? props.onColor : props.offColor
+  if (props.onColor || props.offColor) backgroundColor = props.switchWhen ? props.onColor : props.offColor
 
   function activate() {
     const switchCircle = document.getElementById('switchCircle')
@@ -34,11 +33,10 @@ export const Switch: React.FC<Props> = memo(props => {
       backgroundColor={backgroundColor}
     >
       <div id="switch" onClick={activate}>
-        <div
-          id="switchCircle"
-          className={props.switchWhen ? 'active' : ''}
-        ></div>
+        <div id="switchCircle" className={props.switchWhen ? 'active' : ''}></div>
       </div>
     </SwitchStyle>
   )
 })
+
+export default Switch

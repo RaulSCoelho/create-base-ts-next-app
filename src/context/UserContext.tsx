@@ -36,9 +36,5 @@ export default function UserProvider({ children }) {
   const user = getFakeUser()
   const isAuthenticated = !!user
 
-  return (
-    <UserContext.Provider value={{ isAuthenticated, user }}>
-      {children}
-    </UserContext.Provider>
-  )
+  return <UserContext.Provider value={{ isAuthenticated, user }}>{children}</UserContext.Provider>
 }

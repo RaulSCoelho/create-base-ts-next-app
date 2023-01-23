@@ -15,17 +15,11 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
   input {
     outline: none;
   }
 
   #__next {
     background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
   }
 `
